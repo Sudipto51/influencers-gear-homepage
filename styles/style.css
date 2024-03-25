@@ -8,7 +8,7 @@
 /* shared style  */
 .primary-text {
   font-size: 1.75rem;
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(24, 25, 31);
 }
 
@@ -31,9 +31,13 @@
 }
 
 /* header section starts  */
+body{
+  padding: 60px;
+}
 
 header {
-  padding: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
  
 }
 
@@ -51,6 +55,7 @@ header {
 .navbar-items ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 30px;
 }
 
@@ -87,27 +92,128 @@ header {
 
 }
 
-
-
 .fa-arrow-right{
   margin-left: 10px;
+}
+
+/* .company-list  section styles */
+.company-list{
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.company-list-container{
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 40px 60px;
+  border: 1px solid grey;
+  margin-bottom: 100px;
+  
+  
+}
+
+
+/* product collection styles starts  */
+
+.product{
+  max-width: 1047px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product>h3{
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.card{
+  padding: 14px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 330px;
+  height: 476px;
+  text-align: left;
+
+}
+
+.product-price{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.card>img{
+  margin-bottom: 16px;
+}
+
+.rating-text{
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgb(94, 99, 102);
+}
+
+.product-description{
+  margin-top: 10px;
+  
+}
+
+.checked{
+  color: orange;
 }
 
 /* responsive styles  */
 
 /* for mobile devices */
 @media screen and (max-width: 576px) {
-  .navbar {
-    flex-direction: column;
-    gap: 30px;
+  
+  body{
+    padding: 20px;
   }
 
+  .navbar {
+    flex-direction: column;
+    gap: 30px;    
+  }
+
+  .navbar-items ul{
+    gap: 10px;
+
+  }
+
+ 
   .banner {
     flex-direction: column-reverse;
     gap: 0px;
+    margin-bottom: 30px;
   }
 
   .banner-content {
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  .company-list-container{
+    flex-wrap: wrap;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px auto;
+  }
+
+  
+  .product-container{
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+  }
+
+  .card{
+    width: 100%;
     text-align: center;
   }
 }
@@ -119,7 +225,19 @@ header {
     flex-direction: column-reverse;
     gap: 30px;
     margin-top: 30px;
+    margin-bottom: 10px;
     
+  }
+  
+
+  .product-container{
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+  }
+
+  .card{
+    width: 100%;
+    text-align: center;
   }
 
   .banner-content{
@@ -134,8 +252,16 @@ header {
     margin-top: 10px;
   }
 
+  
+
   .navbar-items ul{
     gap: 20px;
+  }
+
+  .company-list-container{
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0px auto;
   }
 }
 /* font family  */
