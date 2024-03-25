@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* shared style  */
+.primary-text {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: rgb(24, 25, 31);
+}
+
+.secondary-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgb(58, 58, 58);
+  line-height: 24px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.btn-primary {
+  border: none;
+  padding: 10px 24px;
+  border-radius: 41px;
+  background: rgb(224, 44, 109);
+  color: white;
+  margin-top: 16px;
+}
+
+/* header section starts  */
+
+header {
+  padding: 60px;
+ 
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.navbar-items ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.navbar-items ul li {
+  list-style: none;
+}
+
+.navbar-items ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.banner {
+  display: flex;
+  gap: 130px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  margin-top: 50px;
+}
+
+.banner-content{
+  margin:100px 0px;
+}
+
+.banner-title {
+  font-size: 3.25rem;
+  color: rgb(58, 58, 58);
+  max-width: 582px;
+}
+
+.banner-img .main-camera {
+ width: 100%;
+
+}
+
+
+
+.fa-arrow-right{
+  margin-left: 10px;
+}
+
+/* responsive styles  */
+
+/* for mobile devices */
+@media screen and (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+
+  .banner-content {
+    text-align: center;
+  }
+}
+
+/* for tablet  */
+
+@media screen and (min-width:576px) and (max-width:994px) {
+  .banner{
+    flex-direction: column-reverse;
+    gap: 30px;
+    margin-top: 30px;
+    
+  }
+
+  .banner-content{
+    margin-top: 30px;
+  }
+
+  .banner-img .main-camera {
+    margin-top: 40px; 
+  }
+
+  .banner-title{
+    margin-top: 10px;
+  }
+
+  .navbar-items ul{
+    gap: 20px;
+  }
+}
+/* font family  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
