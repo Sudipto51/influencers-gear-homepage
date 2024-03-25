@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  text-decoration: none;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -28,14 +29,15 @@
   background: rgb(224, 44, 109);
   color: white;
   margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 /* header section starts  */
-body{
-  padding: 60px;
-}
+
 
 header {
+  padding: 60px;
   max-width: 1200px;
   margin: 0 auto;
  
@@ -87,8 +89,24 @@ header {
   max-width: 582px;
 }
 
+.banner-img{
+  
+  position: relative;
+  
+  
+}
+
+.banner-img .circle-design{
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  
+  
+}
+
 .banner-img .main-camera {
- width: 100%;
+  position: relative;
+  z-index: 1;
 
 }
 
@@ -117,20 +135,23 @@ header {
 /* product collection styles starts  */
 
 .product{
-  max-width: 1047px;
+  max-width: 1050px;
   margin: 0 auto;
-  text-align: center;
+  text-align: right;
 }
 
 .product>h3{
   margin-top: 100px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .product-container{
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 30px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .card{
@@ -168,18 +189,89 @@ header {
   color: orange;
 }
 
+.see-more-btn{
+  color:rgba(224, 44, 109, 0.87);
+  font-size: 1rem;
+  font-weight: 700;
+   
+}
+
+
+/* feature section style starts  */
+
+.feature{
+  max-width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+
+
+.feature-title{
+  font-size: 2.375rem;
+  font-weight: 700;
+  color: rgb(10, 8, 38);
+}
+
+.feature-description{
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 28px;
+  color: rgb(108, 108, 108);
+  max-width: 500px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.feature-btn{
+  border-radius: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* footer styles starts  */
+.footer-container{
+  background-color: #0a0826;
+  color: white;
+  text-align: center;
+  padding: 60px;
+}
+
+.footer-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer-description{
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgb(217, 219, 225);
+}
+
+.footer-link-icon a{
+  color: white;
+}
+.footer-link-icon a i{
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+
+
 /* responsive styles  */
 
 /* for mobile devices */
 @media screen and (max-width: 576px) {
   
-  body{
-    padding: 20px;
-  }
-
-  .navbar {
+  
+  .navbar{
     flex-direction: column;
-    gap: 30px;    
+    gap: 30px; 
+     
   }
 
   .navbar-items ul{
@@ -194,6 +286,16 @@ header {
     margin-bottom: 30px;
   }
 
+  .banner-img .main-camera{
+    width: 202px;
+    height: 190px;
+  }
+
+  .banner-img .circle-design{
+    width: 257px;
+    height: 257px;
+  }
+
   .banner-content {
     text-align: center;
     margin: 20px 0px;
@@ -206,16 +308,38 @@ header {
     margin: 10px auto;
   }
 
+  .product{
+    padding: 20px;
+  }
+
+  .feature{
+    flex-direction: column-reverse;
+    padding: 20px;
+    text-align: center;
+    margin: 20px 0px;
+    gap: 50px;
+    
+  }
+
+  .feature-image img{
+    width: 90%;
+  }
+
   
   .product-container{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    
   }
 
   .card{
     width: 100%;
     text-align: center;
   }
+
+  
+
+  
 }
 
 /* for tablet  */
@@ -228,11 +352,19 @@ header {
     margin-bottom: 10px;
     
   }
+
+  .banner-content{
+    margin: 0;
+  }
   
 
   .product-container{
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+  }
+
+  .product>h3{
+    margin-top: 10px;
   }
 
   .card{
@@ -263,6 +395,19 @@ header {
     width: 80%;
     margin: 0px auto;
   }
+
+  .product{
+    padding: 60px;
+  }
+
+  .feature{
+    flex-direction: column-reverse;
+    padding: 60px;
+    margin: 0px;
+    text-align: center;
+    gap: 50px
+  }
+
 }
 /* font family  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
